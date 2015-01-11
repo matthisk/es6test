@@ -1,0 +1,19 @@
+{
+  "name": "TestCompilers",
+  "version": "0.0.0",
+  "description": "Repo to test several ES6 to 5 compilers",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt-6to5": "^2.0.0",
+    "grunt-traceur": "^0.5.1",
+    "grunt": "^0.4.5",
+    "load-grunt-tasks": "^2.0.0",
+    "traceur": "^0.0.79"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matthisk Heimensen",
+  "license": "ISC"
+}
