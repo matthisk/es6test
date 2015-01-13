@@ -1,7 +1,7 @@
 {
   "name": "TestCompilers",
-  "version": "0.0.0",
-  "description": "Repo to test several ES6 to 5 compilers",
+  "version": "0.1.0",
+  "description": "Repo to test several ES6 to 5 transpilers",
   "main": "Gruntfile.js",
   "dependencies": {
     "grunt-6to5": "^2.0.0",
@@ -10,7 +10,6 @@
     "load-grunt-tasks": "^2.0.0",
     "traceur": "^0.0.79"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -1,16 +1,24 @@
-module.exports = function(grunt) {
+var fs = require('fs');
 
+var dir = './in/';
+
+module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-6to5');
 	grunt.loadNpmTasks('grunt-traceur');
+
+	var files = fs.readdirSync( dir );
+	var sixToFive = {};
+
+	files.forEach(function( file ) {
+		sixToFive['out/6to5/' + file] = dir + file;
+	});
 
 	grunt.initConfig({
 		
 		'6to5' : {
 			options : {},
 			dist : {
-				files : {
-					'arrows.js' : 'out/6to5/arrows.js'
-				}
+				files : sixToFive
 			}
 		},
 
@@ -19,7 +27,8 @@ module.exports = function(grunt) {
 			custom : {
 				files : [{
 					expand : true,
-					src : ['arrows.js'],
+					cwd : 'in/',
+					src : files,
 					dest : 'out/traceur'
 				}]
 			}
@@ -28,5 +37,4 @@ module.exports = function(grunt) {
 	});
 
 	grunt.registerTask('default', ['6to5', 'traceur']);
-
 };

@@ -23,5 +23,10 @@ var bob = {
     this._friends.forEach(function (f) {
       return console.log(_this2._name + " knows " + f);
     });
+  },
+
+  testArgs : a => {
+  	var args = arguments;
+  	console.log( a );
   }
 };
