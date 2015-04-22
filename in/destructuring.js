@@ -1,5 +1,22 @@
 // list matching
-var [a, , b] = [1,2,3];
+var [a,, b] = [1,2,3];
+var [dick,pic] = 10;
+
+function a( [x,rest] ) {
+  return rest;
+}
+
+function ff( [ a, [ b, c, [d,f,g] ], ...rest ]) {
+  console.log( a + b + c );
+}
+
+function fff( [] ) {
+  var x = 10, y = 12;
+  [x,y] = [y,x];
+  for( var i = 0; i < 100; [j,i] = [i,i+1] )
+    console.log(i);
+  return [x,y] = [y,x];
+}
 
 // object matching
 var { op: a, lhs: { op: b }, rhs: c }
@@ -12,6 +29,9 @@ var {op, lhs, rhs} = getASTNode()
 // Can be used in parameter position
 function g({name: x}) {
   console.log(x);
+}
+function gg( [ a, b, ...c ] ) {
+  console.log( a );
 }
 g({name: 5})
 

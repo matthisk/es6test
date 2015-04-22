@@ -10,4 +10,5 @@ var obj = {
     },
     // Computed (dynamic) property names
     [ 'prop_' + (() => 42)() ]: 42
+
 };

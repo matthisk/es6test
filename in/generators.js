@@ -16,3 +16,8 @@ for (var n of fibonacci) {
     break;
   print(n);
 }
+
+function *generator() {
+  var x = 1 + (yield "foo");
+  console.log(x);
+}

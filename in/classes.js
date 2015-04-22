@@ -1,12 +1,21 @@
+class C {}
+var c1 = C;
+{
+  class C {}
+  var c2 = C;
+}
+
+
+class Name { };
 class Mesh {
   constructor(geometry) {
     this.geometry = geometry;
   }
 
-  update() {
+  update( y = 12 ) {
     console.log("update");
   }
-}
+};
 
 class SkinnedMesh extends Mesh {
   constructor(geometry, materials) {
@@ -25,3 +34,4 @@ class SkinnedMesh extends Mesh {
     return new THREE.Matrix4();
   }
 }
+
